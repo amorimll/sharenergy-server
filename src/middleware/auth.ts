@@ -10,8 +10,6 @@ export const verifyToken = async (req: UserRequest, res: Response, next: NextFun
   try {
     const token = req.header('Authorization')?.replace('Bearer ', '');
 
-    console.log(token)
-
     if (!token) {
       return res.status(403).json({errorMessage: "Acesso Negado, token necessário."});
     }
