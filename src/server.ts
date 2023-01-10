@@ -8,7 +8,7 @@ dotenv.config();
 const PORT: number = process.env.PORT ? Number(process.env.PORT) : 3001
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb://mongo:V4tOgItk0gl2MBFsYTJz@containers-us-west-188.railway.app:7297")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     app.listen(PORT, () => console.log(`Servidor iniciado na porta ${PORT}.`));
     populateDB()
