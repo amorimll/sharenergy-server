@@ -11,5 +11,5 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
+app.use("/customer", verifyToken, customerRoutes);
 app.use("/auth", authRoutes);
-app.use("/", customerRoutes);
