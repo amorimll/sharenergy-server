@@ -8,7 +8,7 @@ dotenv.config();
 const PORT: string = "3001";
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("3001")
+  .connect("mongodb://localhost/sharenergy-backend")
   .then(() => {
     app.listen(PORT, () => console.log(`Servidor iniciado na porta ${PORT}.`));
     populateDB()
