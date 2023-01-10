@@ -5,7 +5,7 @@ import { populateDB } from "./utils/populateDB";
 
 dotenv.config();
 
-const PORT: string = "3001";
+const PORT: number = process.env.PORT ? Number(process.env.PORT) : 3001
 mongoose.set("strictQuery", false);
 mongoose
   .connect("mongodb://mongo:V4tOgItk0gl2MBFsYTJz@containers-us-west-188.railway.app:7297")
