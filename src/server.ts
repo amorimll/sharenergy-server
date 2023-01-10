@@ -5,7 +5,7 @@ import { populateDB } from "./utils/populateDB";
 
 dotenv.config();
 
-const PORT: number = 3001;
+const PORT: number = "3001";
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URL)
